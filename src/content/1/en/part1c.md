@@ -723,7 +723,12 @@ Our <i>App</i> component now looks like this:
 const App = (props) => {
   const [ counter, setCounter ] = useState(0)
   const setToValue = (value) => setCounter(value)
-
+  const Display = ({ counter }) => <div>{counter}</div>
+  const Button = ({ onClick, text }) => (
+    <button onClick={onClick}>
+      {text}
+    </button>
+  )
 
   return (
     <div>
